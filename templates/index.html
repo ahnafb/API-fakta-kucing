@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fakta Kocheng!!!</title>
+    <title>Cat Facts!!!</title>
     <!-- Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Jquery -->
@@ -13,21 +13,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="{{ url_for('static', filename='script.js') }}"></script>
-    <style>
-        body {
-            background-color: #f3f4f6;
-            background-size: auto;
-            background-position: center;
-            background-image: url('static/images/hello-cat.gif'); /* Gambar default */
-        }
-    </style>
 </head>
 
 <body class="h-screen flex justify-center items-center">
     <div class="max-w-xl mx-auto p-8 bg-white bg-opacity-75 rounded-lg shadow-lg">
-        <h1 class="text-4xl font-bold mb-4">Fakta Kucing</h1>
-        <p id="factDisplay" class="text-lg text-gray-700 mb-6 max-w-sm">Klik tombol di atas untuk melihat fakta kucing!</p>
-        <button id="fetchButton" class="bg-blue-500 text-white px-4 py-3 rounded-md mb-4">Dapatkan Fakta Kucing</button>
+        <h1 class="text-4xl font-bold mb-4">Cat Facts</h1>
+        <p id="factDisplay" class="text-lg text-gray-700 mb-6 max-w-sm">Click the button below to see a cat fact!</p>
+        <button id="fetchButton" class="bg-purple-400 hover:bg-purple-950 text-white px-4 py-3 rounded-md mb-4 transition-all duration-300">Get The Fact!</button>
     </div>
 </body>
 

@@ -1,5 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
 body {
     background-color: #f3f4f6;
-    background-size: cover;
+    background-size: auto;
     background-position: center;
+    background-image: url('/static/images/hello-cat.gif');
+    /* Gambar default */
+}
+
+/* CSS tambahan jika diperlukan */
+#fetchButton:hover {
+    background-color: #1E40AF;
+}
+
+#fetchButton:hover:hover {
+    transform: translateY(-2px);
 }
