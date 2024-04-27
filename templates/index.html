@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakta Kocheng!!!</title>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('fetchButton').addEventListener('click', function() {
+        fetch('https://catfact.ninja/fact')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json(); // Mengubah respons menjadi objek JSON
+          })
+          .then(data => {
+            // Menampilkan fakta kucing di halaman HTML
+            document.getElementById('factDisplay').textContent = data.fact;
+          })
+          .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+          });
+      });
+    });
+    </script>
+</head>
+
+<body>
+    <h1>Fakta Kocheng</h1>
+    <button id="fetchButton">Ambil Fakta Kocheng</button>
+    <p id="factDisplay">Klik tombol di atas untuk melihat fakta kocheng!</p>
+</body>
+
+</html>
